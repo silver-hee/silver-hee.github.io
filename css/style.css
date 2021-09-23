@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html,body{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+
+    background-color: #F2F2F2;
+}
+.first{
+    height: 100vh;
+    background-color: #F2F2F2;
+    /* background:url("../images/페이지1.png"); */
+
+}
+.index-frame{
+    /* margin:30px 150px; */ 
+    color:#F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrap{
+    position:absolute;
+    top:42%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:teal;
+    text-align: center;
+}
+
+.main-img{
+    font-size: 10rem;
+}
+
+.lg-text{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #FFD966;
+    -webkit-text-stroke: 0.5px #8086F2;
+}
+
+
+.sm-text{
+    position: relative;
+    bottom: -90vh;
+    display: flex;
+    width: 385px;
+    height: 138px;
+    background: url("https://i.ibb.co/JBnZCtB/image.png");
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: space-around;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+
+.sm-textin > a{
+   display: flex;
+}
+.sm-text > a:hover{
+    color:white;
+ }
+ 
+
+#dynamic{
+    position:relative;
+    display:inline-block;
+}
+
+/* 가상요소 p태그가 끝나기 전 가상요소를 생성함 */
+#dynamic::after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    right:-10px;
+    width:4px;
+    height:100%;
+    background-color:teal;
+}
+
+#dynamic.active::after{
+    display:none;
+}
+
+
+/* ----------------home html------------ */
+/* 박스들이 일정한 mrgin을 가지도록 frame설정 */
+
+.frame{
+    margin:30px 80px;
+    height: 1100px; 
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+
+}
+
+.header{
+    margin-bottom: 10px;
+}
+
+.me{
+    width: 100vw;
+    height: 100vh;
+}
+/* list */
+.navigator{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+li{
+    display: inline;
+    align-self: center;
+    margin:0;
+    margin-left: 15px;
+}
+
+ul{
+    margin:0;
+}
+
+
+.site-name{
+    margin:0;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 50px;
+    color: #F2E635;
+}
+/* 다른페이지에서 list를 쓸 수 있기 때문에 
+폰트설정은 따로 클래스를 지정해주어 분리한다 */
+.nav-menu{
+    margin: 10px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    
+}
+/* 로고 */
+
+
+.site-name > a{
+    color:#F2E205;
+}
+/* 모든 a태그 */
+a{  
+    color:#60A672;
+    text-decoration:none;
+
+}
+
+
+
+.korean-comment>a{
+    color:#6A8AA6;
+}
+
+
+
+
+/* 폰트 호버 색상 변경 & 호버시 부드럽게 트랜지션 설정 */
+.nav-menu:hover{
+    color:#FFEC67;
+    transition:0.3s;
+}
+
+
+/*dashborard*/
+
+.dashboard{
+    display: flex;
+    flex-direction:column;
+    margin-top:100px;
+    color: #595959;
+}
+
+.korean-comment{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    /* font-weight: bold; */
+    font-size:30px;
+}
+
+.sample{
+    background-color: #F2E635;
+}
+.sample:hover{
+    
+    background-color: #F2F2F2 ;
+
+    transition:0.3s;
+}
+
+.higlight{
+    background-color: #F2F2F2 ;
+
+    transition:0.3s;
+}
+
+.higlight:hover{
+    background-color: #F2F2F2 ;
+
+    transition:0.3s;
+}
+
+.type:hover{
+    background-color: teal;
+}
+
+/* footer */
+.footer{
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 800px;
+}
+
+.contact{
+    border-top: 1px solid #F2E635;
+    font-family: 'Montserrat', sans-serif;
+    font-size:50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color:#60A672;
+}
+.link > a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 15px;
+    color:#60A672;
+}
+.link > a:hover{
+    color:#FFEC67;
+}
+
+/* road map */
+
+.roadmap{
+    display: flex;
+    margin: 50px;
+    flex-wrap: wrap;
+    margin-left: 127px;
+}
+.road-img{
+    width: 200px;
+    height: 200px;
+    /* border-radius: 200px; */
+}
+.roadmap img{
+    margin-bottom: 19px;
+}
+
+.roadmap h3{
+    margin-bottom: 20px;
+}
+.languagebox{
+    width: 1920px;
+    height: 300px;
+    margin: 50px 0;
+    margin-bottom: 98px;
+}
+
+
+/* profile */
+.profile-section{
+    display: flex;
+    flex-direction: row;
+    padding: 40px 200px;
+}
+
+/* 호버시 배경색 */
+
+/* h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  h1::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #C3E2DE;
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  
+  h1 {
+    position: relative;
+    font-size: 2.5rem;
+    font-family: 'IBM Plex Sans KR';
+  }
+   */
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
+
+.introduction{
+    font-style: #8C8C8C;;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 6rem; */
+    /* align-content: center; */
+    /* flex-wrap: nowrap; */
+    align-items: stretch;
+    justify-content: center;
+    
+    /* margin-top: 6rem; */
+ }
+#profile-picture{
+    border: 20px solid white;
+    border-radius: 47px;
+    background-color: #C3E2DE;
+    width:400px;
+    margin-right: 60px;
+
+}
+
+.introduction >h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 30px 0px;
+    font-family: 'Montserrat',  sans-serif;
+}
+.introduction >p{
+    font-family: 'Gowun Dodum', sans-serif; 
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: 300px;
+    font-size: 34PX;
+    font-weight: bold;
+}
+
+#capability{
+    font-family: 'Montserrat',  sans-serif;
+    font-weight: 400px;
+    font-size:20px;
+    font-style:italic;
+    line-height: 30px;
+}
+
+/* about */
+.My-info{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 35px;
+    margin:30px 100px;
+}
+
+/* .about-section{
+    background-color:aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 100px 150px;
+    margin-top: 20px;
+} */
+.about-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-start;
+    margin: 100px 150px;
+    margin-top: 20px;
+}
+
+.about{
+    
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.about>p{
+    
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom:40px;
+}
+
+
+/* favorite */
+
+
+.my-favorite{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 35px;
+    margin:30px 100px;
+    padding-top:30px;
+    
+}
+.favorite-section1{
+    width: 1920px;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+    height: 1080px;
+}
+
+.favorite-section>h2{
+    margin:0px;
+    font-family: 'Gowun Dodum', sans-serif;
+    /* font-family: 'Montserrat',  sans-serif; */
+}
+.favorite-section>p{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight:300px;
+    font-size:16px;
+    margin-bottom:40px;
+}
+
+.post-info>h4>a{
+    color:#7681A2;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+
+}
+
+/* contents */
+.section-01,.section-02,.section-03 { position: relative; height: 100%; width: 100%; }
+/* .section-01 { background-color: #ffc8a2;}
+.section-02 { background-color: #91b8ff;}
+.section-03 { background-color: #a2ffbd;} */
+
+/* floating menu */
+.floating-menu { 
+    position: fixed; 
+    right: 50px; 
+    top: 50%; 
+    z-index: 100; 
+    width: 128px;  
+    margin: -220px 0 0 0; 
+ 
+}
+
+.languagebox,.serverbox>p{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: bold;
+}
+
+.floating-menu li { margin: 0; *float: left; }
+.floating-menu a { display: block; width: 123px; padding: 10px 0;color: #fff; text-align: center; text-decoration: none;}
+.floating-menu a.menu-04 { height: 20px; background: none; }
+.floating-menu li.on a {  color: #fff; }
+.floating-menu li.on a.menu-01 {background-position: -131px 0; }
+.floating-menu li.on a.menu-02 {background-position: -131px -104px; }
+.floating-menu li.on a.menu-03 { background-position: -131px -219px; }
